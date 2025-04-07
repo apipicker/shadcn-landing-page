@@ -1,6 +1,7 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import cubeLeg from "../assets/cube-leg.png";
+import {  PlaneIcon, ChartIcon } from "./Icons";
+import chatbotImage from "../assets/cube-leg.png";
+import { ChatBubbleIcon } from "@radix-ui/react-icons";
 
 interface ServiceProps {
   title: string;
@@ -10,22 +11,22 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "Assistenza Clienti Automatizzata",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Offri supporto 24/7 ai tuoi clienti con chatbot AI che rispondono alle domande frequenti e migliorano la soddisfazione del cliente.",
+    icon: <ChatBubbleIcon />,
+  },
+  {
+    title: "Integrazione con Sistemi Aziendali",
+    description:
+      "Collega il chatbot ai tuoi CRM e altri strumenti aziendali per una gestione efficiente dei dati e delle interazioni con i clienti.",
+    icon: <PlaneIcon />,
+  },
+  {
+    title: "Analisi e Reportistica",
+    description:
+      "Monitora le performance del chatbot e ottieni insight dettagliati per ottimizzare le strategie di comunicazione e vendita.",
     icon: <ChartIcon />,
-  },
-  {
-    title: "Project Management",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <WalletIcon />,
-  },
-  {
-    title: "Task Automation",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <MagnifierIcon />,
   },
 ];
 
@@ -36,14 +37,13 @@ export const Services = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
+              Servizi Personalizzati{" "}
             </span>
-            Services
+            per la Tua Azienda
           </h2>
 
-          <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+          <p className="text-muted-foreground text-xl mt-4 mb-8">
+            Scopri come i nostri chatbot AI possono trasformare la comunicazione con i tuoi clienti e ottimizzare i processi aziendali.
           </p>
 
           <div className="flex flex-col gap-8">
@@ -66,11 +66,13 @@ export const Services = () => {
         </div>
 
         <img
-          src={cubeLeg}
+          src={chatbotImage}
           className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
-          alt="About services"
+          alt="Illustrazione dei servizi offerti dai chatbot AI"
         />
       </div>
     </section>
   );
 };
+
+ 

@@ -14,39 +14,43 @@ interface FeatureProps {
   title: string;
   description: string;
   image: string;
+  alt: string;
 }
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "Design responsive",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "La nostra piattaforma si adatta perfettamente a qualsiasi dispositivo, offrendo un'esperienza utente ottimale su desktop, tablet e mobile.",
     image: image4,
+    alt: "Grafica che rappresenta il design responsive su dispositivi mobili",
   },
   {
-    title: "Intuitive user interface",
+    title: "Interfaccia intuitiva",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Crea e gestisci il tuo bot AI con un’interfaccia semplice e immediata. Nessuna esperienza tecnica richiesta.",
     image: image3,
+    alt: "Utente che interagisce con un'interfaccia user-friendly",
   },
   {
-    title: "AI-Powered insights",
+    title: "Insight potenziati dall'AI",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Ottieni analisi in tempo reale sui tuoi clienti grazie all'intelligenza artificiale. Scopri trend, richieste frequenti e comportamenti utente.",
     image: image,
+    alt: "Grafico in crescita che rappresenta insight con intelligenza artificiale",
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "Tema chiaro/scuro",
+  "Recensioni integrate",
+  "Caratteristiche personalizzabili",
+  "Piani di abbonamento",
+  "Modulo contatti",
+  "Il nostro team",
+  "Design responsivo",
+  "Newsletter automatica",
+  "Stile minimalista",
 ];
 
 export const Features = () => {
@@ -56,11 +60,16 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+        Le{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
-        </span>
+          funzionalità principali
+        </span>{" "}
+        della nostra piattaforma
       </h2>
+
+      <p className="text-xl text-muted-foreground md:text-center md:w-3/4 mx-auto">
+        Tutto ciò che ti serve per creare un assistente virtuale AI efficace, veloce da configurare e integrabile con ogni tipo di sito o attività.
+      </p>
 
       <div className="flex flex-wrap md:justify-center gap-4">
         {featureList.map((feature: string) => (
@@ -76,7 +85,7 @@ export const Features = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
+        {features.map(({ title, description, image, alt }: FeatureProps) => (
           <Card key={title}>
             <CardHeader>
               <CardTitle>{title}</CardTitle>
@@ -87,7 +96,7 @@ export const Features = () => {
             <CardFooter>
               <img
                 src={image}
-                alt="About feature"
+                alt={alt}
                 className="w-[200px] lg:w-[300px] mx-auto"
               />
             </CardFooter>

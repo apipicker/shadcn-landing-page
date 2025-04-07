@@ -30,44 +30,44 @@ const pricingList: PricingProps[] = [
     popular: 0,
     price: 0,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+      "Prova gratuitamente il nostro chatbot AI sul tuo sito. Nessuna carta richiesta, configurazione immediata.",
+    buttonText: "Inizia gratis",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
+      "1 chatbot attivo",
+      "Fino a 100 messaggi al mese",
+      "Integrazione semplice tramite script",
+      "Template base per settore",
+      "Supporto community",
     ],
   },
   {
-    title: "Premium",
+    title: "Pro",
     popular: 1,
-    price: 5,
+    price: 19,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "Ideale per freelance e piccole imprese. Automatizza le risposte e raccogli lead senza sforzo.",
+    buttonText: "Provalo gratis",
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "3 chatbot attivi",
+      "Fino a 1.000 messaggi al mese",
+      "Personalizzazione avanzata dei prompt",
+      "Integrazione CRM (Zapier, webhook)",
+      "Supporto email prioritario",
     ],
   },
   {
-    title: "Enterprise",
+    title: "Business",
     popular: 0,
-    price: 40,
+    price: 49,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Per agenzie e aziende che vogliono scalare con assistenti AI intelligenti e connessi ai propri sistemi.",
+    buttonText: "Contattaci",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Chatbot illimitati",
+      "Messaggi illimitati",
+      "Integrazione dati in tempo reale (API)",
+      "Rimozione del nostro branding",
+      "Supporto premium dedicato",
     ],
   },
 ];
@@ -79,44 +79,42 @@ export const Pricing = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Piani{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          Unlimited{" "}
-        </span>
-        Access
+          flessibili
+        </span>{" "}
+        per ogni esigenza
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Scegli il piano adatto a te e inizia a usare il tuo chatbot AI per automatizzare il supporto, raccogliere contatti e far crescere il tuo sito.
       </h3>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
             className={
               pricing.popular === PopularPlanType.YES
-                ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+                ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-2 border-primary"
                 : ""
             }
           >
             <CardHeader>
-              <CardTitle className="flex item-center justify-between">
+              <CardTitle className="flex items-center justify-between">
                 {pricing.title}
                 {pricing.popular === PopularPlanType.YES ? (
                   <Badge
                     variant="secondary"
                     className="text-sm text-primary"
                   >
-                    Most popular
+                    Il più scelto
                   </Badge>
                 ) : null}
               </CardTitle>
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                <span className="text-3xl font-bold">€{pricing.price}</span>
+                <span className="text-muted-foreground"> /mese</span>
               </div>
-
               <CardDescription>{pricing.description}</CardDescription>
             </CardHeader>
 
