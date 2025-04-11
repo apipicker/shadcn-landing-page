@@ -16,6 +16,7 @@ import { LangProvider } from "./context/index.tsx";
 function App() {
   return (
     <LangProvider>
+      {/* {'v1.1.2'} */}
       <Navbar />
       <Hero />
       {/* <Sponsors /> */}
