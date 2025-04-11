@@ -1,11 +1,12 @@
 import { LogoIcon } from "./Icons";
+import { Trans } from "./Trans";
 
 export const Footer = () => {
   return (
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
 
-      <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
+      {/* <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <a
             rel="noreferrer noopener"
@@ -148,12 +149,11 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="container pb-14 text-center">
+      <section className="container pb-14 text-center pt-14">
         <h3>
-          &copy; 2024 Landing page made by{" "}
-         Apipicker
+          &copy; {new Date().getFullYear()}    <Trans isHtml>footer.title</Trans>
         </h3>
       </section>
     </footer>

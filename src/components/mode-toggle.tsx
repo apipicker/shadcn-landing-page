@@ -7,10 +7,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun } from "lucide-react";
+import { useLangState } from "@/context/lang/context";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
-
+const { menu } = useLangState();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -26,13 +27,13 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          {menu?.theam?.light}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+          {menu?.theam?.dark}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+          {menu?.theam?.system}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

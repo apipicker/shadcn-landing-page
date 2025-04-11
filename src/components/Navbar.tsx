@@ -16,6 +16,8 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
+import { ModeLang } from "./mode-lang";
+import { useLangState } from "@/context/lang/context";
 
 interface RouteProps {
   href: string;
@@ -25,7 +27,7 @@ interface RouteProps {
 const routeList: RouteProps[] = [
   {
     href: "#features",
-    label: "Features",
+    label: "feature",
   },
   // {
   //   href: "#testimonials",
@@ -33,16 +35,17 @@ const routeList: RouteProps[] = [
   // },
   {
     href: "#pricing",
-    label: "Pricing",
+    label: "pricing",
   },
   {
     href: "#faq",
-    label: "FAQ",
+    label: "faq",
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { menu } = useLangState();
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -90,19 +93,19 @@ export const Navbar = () => {
                       onClick={() => setIsOpen(false)}
                       className={buttonVariants({ variant: "ghost" })}
                     >
-                      {label}
+                      {menu[label]}
                     </a>
                   ))}
                   <a
                     rel="noreferrer noopener"
-                      href="https://app.apipicker.com/signin"
+                    href="https://app.apipicker.com/signin"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",
                     })}`}
                   >
                     {/* <GitHubLogoIcon className="mr-2 w-5 h-5" /> */}
-                    Login
+                    {menu.signIn}
                   </a>
                 </nav>
               </SheetContent>
@@ -119,8 +122,8 @@ export const Navbar = () => {
                 className={`text-[17px] ${buttonVariants({
                   variant: "ghost",
                 })}`}
-              >
-                {route.label}
+              > 
+                {menu[route.label]}
               </a>
             ))}
           </nav>
@@ -133,10 +136,11 @@ export const Navbar = () => {
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
               {/* <GitHubLogoIcon className="mr-2 w-5 h-5" /> */}
-              Sigin
+              {menu.signIn}
             </a>
 
             <ModeToggle />
+            <ModeLang />
           </div>
         </NavigationMenuList>
       </NavigationMenu>

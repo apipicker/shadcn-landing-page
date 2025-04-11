@@ -11,10 +11,11 @@ import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Services } from "./components/Services";
 import "./App.css";
+import { LangProvider } from "./context/index.tsx";
 
 function App() {
   return (
-    <>
+    <LangProvider>
       <Navbar />
       <Hero />
       {/* <Sponsors /> */}
@@ -30,7 +31,7 @@ function App() {
       <FAQ />
       <Footer />
       <ScrollToTop />
-    </>
+    </LangProvider>
   );
 }
 
