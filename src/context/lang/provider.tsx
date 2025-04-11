@@ -10,7 +10,12 @@ export const dispatch = (setState: any) => (type: any, value: any) => {
 
 
 export const LangProvider = ({ children }: any) => {
-  const [state, setState] = useReducer(Reducer, IT);
+  const data = localStorage.getItem('lang');
+  let lang = IT;
+  if (data) {
+    lang = JSON.parse(data) || IT;
+  }
+  const [state, setState] = useReducer(Reducer, lang);
   const actions = React.useMemo(
     () => ({
       set: action.handleSet(dispatch(setState)),

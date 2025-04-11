@@ -1,7 +1,7 @@
 export const IT = {
   lang: "it",
   menu: {
-    feature: "Funzionalità",
+    feature: "Funzionalità",
     pricing: "Prezzi",
     faq: "FAQ",
     signIn: "Accedi",
@@ -32,7 +32,7 @@ export const IT = {
     content: `Il primo chatbot AI italiano pensato per siti web, e-commerce e attività locali.
           Addestra il tuo assistente virtuale con pochi click, integralo sul tuo sito e automatizza le risposte ai clienti, la raccolta contatti e molto altro.
           Nessun codice richiesto, solo risultati.`,
-    button: "Get Started",
+    button: "Inizia",
     testimonial: {
       name: "Mario Rossi",
       subtitle: "CEO di Tech Solutions",
@@ -46,14 +46,13 @@ export const IT = {
       title: "Sicurezza Avanzata",
       content: "Protezione dei dati e conformità alle normative GDPR."
     }
-
   },
   pricing: {
     title: `<h2 class="text-3xl md:text-4xl font-bold text-center">Piani <span class="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">flessibili</span> per ogni esigenza</h2>`,
     content: `Scegli il piano adatto a te e inizia a usare il tuo chatbot AI per automatizzare il supporto, raccogliere contatti e far crescere il tuo sito.`,
     pricingList: [
       {
-        title: "Free",
+        title: "Gratuito",
         popular: 0,
         price: 0,
         currency: "€",
@@ -118,7 +117,7 @@ export const IT = {
   },
   about: {
     title: "Chi siamo:",
-    short: " La nostra piattaforma di assistenti virtuali",
+    short: "La nostra piattaforma di assistenti virtuali",
     p1: `Offriamo una piattaforma innovativa per creare chatbot AI personalizzati, pensata per le piccole imprese italiane. 
                 I nostri bot aiutano ad automatizzare le risposte ai clienti, generare nuovi contatti e migliorare l'efficienza aziendale, 
                 tutto senza scrivere una riga di codice.`,
@@ -128,19 +127,19 @@ export const IT = {
     statistics: [
       {
         quantity: "1K+",
-        description: "Users",
+        description: "Utenti",
       },
       {
         quantity: "1.8K+",
-        description: "Subscribers",
+        description: "Abbonati",
       },
       {
         quantity: "112",
-        description: "Downloads",
+        description: "Download",
       },
       {
         quantity: "3",
-        description: "Products",
+        description: "Prodotti",
       },
     ]
   },
@@ -150,7 +149,7 @@ export const IT = {
           funziona
         </span>
         la nostra piattaforma`,
-    content: ` Scopri i 4 step principali per creare, configurare e integrare il tuo assistente virtuale AI con la tua attività online.`,
+    content: `Scopri i 4 step principali per creare, configurare e integrare il tuo assistente virtuale AI con la tua attività online.`,
     features: [
       {
         icon: 'MedalIcon',
@@ -179,12 +178,12 @@ export const IT = {
     ]
   },
   feature: {
-    title: `  Le
+    title: `Le
         <span class="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           funzionalità principali
         </span>
         della nostra piattaforma`,
-    content: ` Tutto ciò che ti serve per creare un assistente virtuale AI efficace, veloce da configurare e integrabile con ogni tipo di sito o attività.`,
+    content: `Tutto ciò che ti serve per creare un assistente virtuale AI efficace, veloce da configurare e integrabile con ogni tipo di sito o attività.`,
     features: [
       {
         title: "Design responsive",
@@ -196,7 +195,7 @@ export const IT = {
       {
         title: "Interfaccia intuitiva",
         description:
-          "Crea e gestisci il tuo bot AI con un’interfaccia semplice e immediata. Nessuna esperienza tecnica richiesta.",
+          "Crea e gestisci il tuo bot AI con un'interfaccia semplice e immediata. Nessuna esperienza tecnica richiesta.",
         image: 'image3',
         alt: "Utente che interagisce con un'interfaccia user-friendly",
       },
@@ -240,22 +239,22 @@ export const IT = {
     btn2: "Scopri tutte le funzionalità",
   },
   newsletter: {
-    title: `<h3 class="text-center text-4xl md:text-5xl font-bold">Join Our Daily <span class="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">Newsletter</span></h3>`,
-    content: `Lorem ipsum dolor sit amet consectetur.`,
+    title: `<h3 class="text-center text-4xl md:text-5xl font-bold">Unisciti alla nostra <span class="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">Newsletter</span></h3>`,
+    content: `Rimani aggiornato sulle ultime novità e offerte.`,
     form: {
       email: {
         label: "Email",
-        placeholder: "sample@gmial.com",
+        placeholder: "esempio@gmail.com",
       },
       subject: {
-        label: "Subject",
-        placeholder: "write subject hear",
+        label: "Oggetto",
+        placeholder: "scrivi qui l'oggetto",
       },
       message: {
-        label: "Message",
-        placeholder: "write message hear",
+        label: "Messaggio",
+        placeholder: "scrivi qui il tuo messaggio",
       },
-      submit: "Subscribe"
+      submit: "Iscriviti"
     }
   },
   faq: {
@@ -289,5 +288,5 @@ export const IT = {
       },
     ],
   },
-  footer: { title: 'power by Apipicker' }
+  footer: { title: 'powered by Apipicker' }
 }
