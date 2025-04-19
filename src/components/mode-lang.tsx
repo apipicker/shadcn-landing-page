@@ -6,6 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"; 
 import { useLangDispatch, useLangState } from "@/context/lang/context";
+import { EnIcon, ItIcon } from "./Icons";
 
 export function ModeLang() {
   const { set } = useLangDispatch();
@@ -20,7 +21,7 @@ export function ModeLang() {
           className="ghost"
         >
           <span  style={{fontSize: 28}}>
-          {state?.lang==='en'?'🇬🇧':'🇮🇹'}
+          {state?.lang==='en'? <EnIcon size={24} viewBox="0 0 60 30"/>:<ItIcon size={24} viewBox="0 0 3 2"/>}
           </span>
           {/* <Sun className="h-[1.1rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" /> */}
           {/* <Moon className="absolute h-[1.1rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" /> */}

@@ -649,3 +649,29 @@ export const MagnifierIcon = () => {
     </svg>
   );
 };
+export const ItIcon = ({ size, viewBox, ...props }:any) => {
+  return (
+    <>
+      <svg xmlns="http://www.w3.org/2000/svg" width={size}
+        height={size} viewBox={viewBox || "0 0 3 2"} {...props}>
+        <rect width="3" height="2" fill="#009246" />
+        <rect width="2" height="2" x="1" fill="#fff" />
+        <rect width="1" height="2" x="2" fill="#ce2b37" />
+      </svg>
+    </>
+  )
+};
+export const EnIcon = ({ size, viewBox, ...props }:any) => {
+  return (
+    <>
+      <svg xmlns="http://www.w3.org/2000/svg" width={size}
+        height={size} viewBox={viewBox || "0 0 60 30"} {...props}>
+        <path d="m0 0v30h60v-30z" fill="#00247d" />
+        <path d="m0 0 60 30m0-30-60 30" stroke="#fff" strokeWidth="6" />
+        <path d="m0 0 60 30m0-30-60 30" stroke="#cf142b" strokeWidth="4" />
+        <path d="m30 0v30m-30-15h60" stroke="#fff" strokeWidth="10" />
+        <path d="m30 0v30m-30-15h60" stroke="#cf142b" strokeWidth="6" />
+      </svg>
+    </>
+  )
+};
