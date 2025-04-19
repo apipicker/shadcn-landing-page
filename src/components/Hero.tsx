@@ -15,7 +15,7 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3" onClick={() => window.open('https://apipicker.com/signup', '_blink')}>
+          <Button className="w-full md:w-1/3" onClick={() => window.open('https://app.apipicker.com/signup', '_blink')}>
           <Trans>hero.button</Trans>
           </Button>
         </div>
